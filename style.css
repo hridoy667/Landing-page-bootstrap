@@ -1,0 +1,419 @@
+:root {
+    --primary-color: #FF6600;
+    --secondary-color: green;
+    --heading-color: #333;
+    --text-color: #0B1B35;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+html,
+body {
+    /* overflow-x: hidden; */
+}
+
+
+
+
+
+.abel-regular {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-sans {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* Weight classes */
+.dm-sans-regular {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-item.active .nav-link:hover {
+    color: #0a58ca;
+}
+
+.button-section a.text-black:hover {
+    color: #0d6efd;
+
+}
+
+.btn-custom:hover {
+    background-color: #0d6efd;
+    color: white;
+    transition: 0.3s;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.btn-custom {
+    background-color: var(--primary-color);
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.navLinks :last-child {
+    align-items: end;
+}
+
+.section-name {
+    letter-spacing: 0.5rem;
+    font-size: 12px;
+}
+
+
+.hero-section {
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
+
+    .hero-texts {
+        padding: 0px 10px;
+        position: relative;
+        z-index: 3;
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .btn-custom {
+                padding: 8px 20px;
+                background-color: var(--primary-color);
+                color: white;
+                border-radius: 50px;
+                font-weight: bold;
+            }
+
+            .play-btn {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                cursor: pointer;
+
+                .circle-container {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    margin: 0;
+                    /* Remove previous large margins */
+                }
+
+                .inner-circle {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: #5F6064;
+                    /* Using your color variable */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 0.3s ease;
+                }
+
+                .outer-circle {
+                    position: absolute;
+                    width: 120%;
+                    height: 120%;
+                    border-radius: 50%;
+                    border: 5px solid transparent;
+                    /* Thinner border for smaller size */
+                    border-left-color: var(--primary-color);
+                    top: -10%;
+                    left: -20%;
+                    transition: all 0.3s ease;
+                }
+
+                .play-button {
+                    width: 0;
+                    height: 0;
+                    border-top: 8px solid transparent;
+                    border-bottom: 8px solid transparent;
+                    border-left: 14px solid white;
+                    margin-left: 3px;
+                    /* Adjusted for smaller size */
+                }
+
+                .inner-circle:hover {
+                    background-color: #e05b00;
+                    /* Darker shade of primary color */
+                }
+
+                .learn-more-text {
+                    color: var(--text-color);
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 500;
+                    margin: 0;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+
+        .texts {
+            font-family: "Poppins", sans-serif;
+
+            h1 {
+                font-weight: 900;
+            }
+        }
+    }
+
+    .hero-img-section {
+        width: 800px;
+        height: 400px;
+        position: relative;
+        z-index: 2;
+
+        .hero-img {
+            position: relative;
+            z-index: 2;
+            object-fit: cover;
+
+            img {
+                width: 100%;
+                height: auto;
+
+            }
+        }
+
+        .background-data {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 100;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            .card1 {
+                width: 200px;
+                font-size: 12px;
+                transform: translateY(-60px);
+                box-shadow: 0 24px 8px rgba(0, 0, 0, 0.15);
+                border-radius: 10px;
+
+            }
+
+            .card2 {
+                width: 260px;
+                font-size: 12px;
+                transform: translateY(10px);
+                transform: translateX(-80px);
+                border-radius: 10px;
+                box-shadow: 0 24px 8px rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+
+}
+
+.grid-icon {
+    height: 76px;
+    width: auto;
+    object-fit: contain;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.custom-border {
+    border: 2px solid grey;
+
+}
+
+
+.newsletter-input {
+    border-radius: 20px;
+    height: 60px;
+    padding-left: 20px;
+    box-shadow: 0 24px 8px rgba(0, 0, 0, 0.10);
+
+}
+
+.newsletter-input::placeholder {
+    font-size: 20px;
+    color: #0B1B35;
+}
+
+.footer-links a {
+    margin-right: 10px;
+    padding: 0px 10px;
+    color: var(--text-color);
+}
+
+
+@media screen and (max-width:778px) {
+    nav>.container {
+        flex-direction: column;
+    }
+
+    .navLinks>ul {
+        flex-direction: column;
+    }
+
+    .navbar-toggler {
+        margin-left: 200px;
+    }
+
+}
+
+@media screen and (max-width:463px) {
+    .navbar-toggler {
+        margin-left: 0;
+
+        .hero-section {
+            flex-direction: column;
+        }
+
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .card1 {
+        flex-direction: column;
+    }
+
+    /* Hero Section Responsive Styles */
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-texts {
+        order: 1;
+        text-align: center;
+        padding: 20px 0 !important;
+    }
+
+    .hero-img-section {
+        width: 100% !important;
+        height: auto !important;
+        order: 2;
+        margin-top: 30px;
+    }
+
+    .hero-img img {
+        max-width: 100%;
+    }
+
+    .background-data {
+        position: relative !important;
+        transform: none !important;
+        margin-bottom: 20px;
+    }
+
+    .card1,
+    .card2 {
+        width: 100% !important;
+        transform: none !important;
+        margin: 10px 0;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .play-btn {
+        margin-top: 15px;
+    }
+
+    @media (min-width: 768px) {
+        .hero-section {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .hero-texts {
+            order: initial;
+            text-align: left;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .hero-img-section {
+            order: initial;
+            flex: 1;
+            margin-top: 0;
+        }
+
+        .background-data {
+            position: absolute;
+        }
+
+        .card1 {
+            transform: translateY(-60px);
+            width: 200px
+        }
+
+        .card2 {
+            transform: translateX(-80px) translateY(10px);
+            width: 260px;
+        }
+
+        .buttons {
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+        }
+
+        .play-btn {
+            margin-top: 0;
+        }
+    }
+
+
+
+}
+
+@media (min-width: 992px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-img-section {
+        width: 800px !important;
+        height: 400px !important;
+    }
+}
